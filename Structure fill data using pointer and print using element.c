@@ -14,7 +14,7 @@ struct student_record
     struct mark_record mark;
 };
 
-how to fetch data of all element.
+//how to fetch data of all element.
 
     
 int main() {
