@@ -2,6 +2,7 @@
 
 #include<stdio.h>
 #include<string.h>
+#include<stdlib.h>
 
 struct employee{
  char name[50];
@@ -34,4 +35,4 @@ int main()
 
     fillstruct(&emp, "SAGAR",123, "IT");
     printstruct(&emp);
-}
+} 
