@@ -1,3 +1,6 @@
+//Write a c function to take date (04/04/2022) as input and split it as day-04, month-04 & year-2022?
+
+
 #include <stdio.h>
 
 void splitDate(const char *date, int *day, int *month, int *year) {
