@@ -2,7 +2,6 @@
 
 #include<stdio.h>
 #include<string.h>
-#include<stdlib.h>
 
 struct employee{
  char name[50];
@@ -11,13 +10,7 @@ struct employee{
 };
 
 void fillstruct(struct employee *emp, const char *name, int no, const char *dept){
-    
-/*If the string name we have passed through func want to copy to dynamic string so the steps are from line 15 to 20. Otherwise only 19 and 20 line are enough*/
-    int size = sizeof(emp->name);
-    char *str = (char*) malloc(sizeof(char) * size);
-    strncpy(str, name, sizeof(emp->name) -1);
-    printf("String = %s",str);
-    strncpy(emp->name, str, sizeof(emp->name) -1);
+    strncpy(emp->name, name, sizeof(emp->name) -1);
     emp->name[sizeof(emp->name)-1] = '\0';
     emp->id_no= no;
     strncpy(emp->department, dept, sizeof(emp->department) -1);
@@ -35,4 +28,4 @@ int main()
 
     fillstruct(&emp, "SAGAR",123, "IT");
     printstruct(&emp);
-} 
+}
