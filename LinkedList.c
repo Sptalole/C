@@ -1,4 +1,6 @@
-#include <string.h >
+#include<stdio.h>
+#include<stdlib.h>
+#include <string.h>
 
 //Linked list node
 struct node {
@@ -6,7 +8,7 @@ int info;
 struct node* link;
 }*start;
 
-create_list(int data){
+void create_list(int data){
     struct node *q , *tmp;
     tmp = malloc(sizeof(struct node));
     tmp -> info = data;
@@ -25,7 +27,7 @@ create_list(int data){
 }
 
 
-addatbeg(int data){
+void addatbeg(int data){
     struct node *q, *tmp;
     tmp = malloc(sizeof(struct node));
     tmp -> info = data;
@@ -34,7 +36,7 @@ addatbeg(int data){
 }
 
 
-addafter(int data, int pos){
+void addafter(int data, int pos){
     struct node *q, *tmp;
     q = start;
 
@@ -54,7 +56,7 @@ addafter(int data, int pos){
 }
 
 
-del(int data){
+void del(int data){
     struct node *tmp, *q;
     if(start->info == data)
     {
@@ -85,7 +87,7 @@ del(int data){
         printf("Element %d not found\n",data);
 }
 
-display(){
+void display(){
     struct node *q;
     if(start==NULL)
     {
@@ -103,7 +105,7 @@ display(){
     printf("\n");
 }
 
-search(int data){
+void search(int data){
     struct node *ptr = start;
     int pos = 1;
     while(ptr!=NULL)
@@ -121,7 +123,7 @@ search(int data){
 }
 
 
-move(int data1, int data2){
+void move(int data1, int data2){
    struct node *tmp, *o ,*p,*q;
     q = start;
     while(q->link->link!=NULL){
@@ -229,7 +231,7 @@ while(1)
         break;
     case 7:
         printf("Moving 2nd element in between 4th and 5th\n");
-        printf("Enter the element which you want to move and after which node you want to insert\n\n")
+        printf("Enter the element which you want to move and after which node you want to insert\n\n");
         scanf("%d %d",&x,&y);
         move(x,y);
         break;
