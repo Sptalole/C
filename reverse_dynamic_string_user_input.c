@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 
+
+//Taking the input string from user and allocate the memory for that string and reverse it
 // Function to reverse a string in-place
 void rev(char *s) {
     int i, j;
