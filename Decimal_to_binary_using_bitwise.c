@@ -21,3 +21,14 @@ int main()
 
   return 0;
 }
+
+/*OUTPUT*/
+/*
+Enter an integer in decimal number system
+255
+11111111
+--------------------------------------------
+Enter an integer in decimal number system
+12
+00001100
+*/

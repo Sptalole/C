@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <conio.h>
 
-char square[10] = { 'o', '1', '2', '3', '4', '5', '6', '7', '8', '9' };
+char square[10] = {'o', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
 
 int checkwin();
 void board();
@@ -58,9 +58,9 @@ int main()
         i = checkwin();
 
         player++;
-    }while (i ==  - 1);
+    } while (i == -1);
 
-    //board();
+    // board();
 
     if (i == 1)
         printf("==>\aPlayer %d win ", --player);
@@ -107,27 +107,23 @@ int checkwin()
         return 1;
 
     else if (square[1] != '1' && square[2] != '2' && square[3] != '3' &&
-        square[4] != '4' && square[5] != '5' && square[6] != '6' && square[7]
-        != '7' && square[8] != '8' && square[9] != '9')
+             square[4] != '4' && square[5] != '5' && square[6] != '6' && square[7] != '7' && square[8] != '8' && square[9] != '9')
 
         return 0;
     else
-        return  - 1;
+        return -1;
 }
-
 
 /*******************************************************************
 FUNCTION TO DRAW BOARD OF TIC TAC TOE WITH PLAYERS MARK
  ********************************************************************/
 
-
 void board()
 {
-    system("cls");
+    // system("cls");
     printf("\n\n\tTic Tac Toe\n\n");
 
     printf("Player 1 (X)  -  Player 2 (O)\n\n\n");
-
 
     printf("     |     |     \n");
     printf("  %c  |  %c  |  %c \n", square[1], square[2], square[3]);
@@ -148,3 +144,96 @@ void board()
 /*******************************************************************
 END OF PROJECT
  ********************************************************************/
+
+/*OUTPUT*/
+/*
+        Tic Tac Toe
+
+Player 1 (X)  -  Player 2 (O)
+
+
+     |     |
+  1  |  2  |  3
+_____|_____|_____
+     |     |
+  4  |  5  |  6
+_____|_____|_____
+     |     |
+  7  |  8  |  9
+     |     |
+
+Player 1, enter a number:  1
+
+
+        Tic Tac Toe
+
+Player 1 (X)  -  Player 2 (O)
+
+
+     |     |
+  X  |  2  |  3
+_____|_____|_____
+     |     |
+  4  |  5  |  6
+_____|_____|_____
+     |     |
+  7  |  8  |  9
+     |     |
+
+Player 2, enter a number:  6
+
+
+        Tic Tac Toe
+
+Player 1 (X)  -  Player 2 (O)
+
+
+     |     |
+  X  |  2  |  3
+_____|_____|_____
+     |     |
+  4  |  5  |  O
+_____|_____|_____
+     |     |
+  7  |  8  |  9
+     |     |
+
+Player 1, enter a number:  2
+
+
+        Tic Tac Toe
+
+Player 1 (X)  -  Player 2 (O)
+
+
+     |     |
+  X  |  X  |  3
+_____|_____|_____
+     |     |
+  4  |  5  |  O
+_____|_____|_____
+     |     |
+  7  |  8  |  9
+     |     |
+
+Player 2, enter a number:  5
+
+
+        Tic Tac Toe
+
+Player 1 (X)  -  Player 2 (O)
+
+
+     |     |
+  X  |  X  |  3
+_____|_____|_____
+     |     |
+  4  |  O  |  O
+_____|_____|_____
+     |     |
+  7  |  8  |  9
+     |     |
+
+Player 1, enter a number:  3
+==>Player 1 win
+*/

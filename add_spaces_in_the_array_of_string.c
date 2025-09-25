@@ -6,8 +6,7 @@ void addSpaces(char *str, char *result) {
     int j = 0;
     for (int i = 0; str[i] != '\0'; i++) {
         result[j++] = str[i];   // Copy the current character
-        result[j++] = ' ';      // Add a space after it
-        result[j++] = ' '; 
+        result[j++] = ' ';      // Add a space after it 
     }
     result[j - 1] = '\0'; // Null-terminate the new string (remove the last space)
 }
@@ -24,3 +23,11 @@ int main() {
 
     return 0;
 }
+
+/*OUTPUT*/
+/*
+d e e p a k
+s a g a r
+f r i n d 1
+b u d d y 2
+*/

@@ -28,3 +28,8 @@ int main()
 
     printf("No");
 }
+
+/*OUTPUT*/
+/*
+Yes
+*/
